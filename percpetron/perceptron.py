@@ -1,7 +1,9 @@
 #### Percpetron Learning Rule ####
+# %%
 import numpy as np
-### E6: Design a Perceptron Network
+import matplotlib.pyplot as plt
 
+### E6: Design a Perceptron Network
 inputs = np.array([
     [1,4],
     [1,5],
@@ -63,7 +65,8 @@ class Perceptron():
         output = self.activation_function(weight_output)
         
         return output
-        
+
+# %%
 # Training network
 perceptron = Perceptron(inputs, targets)
 perceptron.train(100)
@@ -71,7 +74,6 @@ print(perceptron.weights)
 
 # iii
 # Plotting input points and network
-import matplotlib.pyplot as plt
 # Plotting points
 plt.scatter(inputs[:, 0], inputs[:, 1])
 # Plotting decision boundary
